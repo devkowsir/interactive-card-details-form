@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="card">
       <CardContainer cardHolderName={state.cardHolderName.value} cardNumber={state.cardNumber.value} cardExpiryMonth={state.cardExpiryMonth.value} cardExpiryYear={state.cardExpiryYear.value} cardCvc={state.cardCvc.value} />
-      {!isSubmitted ? <CardForm isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} state={state} dispatch={dispatch} /> : <CardSubmitted isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} />}
+      <main>{!isSubmitted ? <CardForm isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} state={state} dispatch={dispatch} /> : <CardSubmitted isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} />}</main>
     </div>
   );
 }
