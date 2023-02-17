@@ -48,7 +48,7 @@ function CardForm({ isSubmitted, setIsSubmitted, state, dispatch }) {
         </div>
         <div className="card__input card__input--half">
           <label htmlFor="cvc">cvc</label>
-          <input type="number" name="CVC" max="999" value={state.cardCvc.value} onChange={(event) => changeDispatcher('cardCvc', event.target.value, CardNumberValidator(event.target.value, 3))} placeholder="123" />
+          <input id="cvc" type="number" name="CVC" max="999" value={state.cardCvc.value} onChange={(event) => changeDispatcher('cardCvc', event.target.value, CardNumberValidator(event.target.value, 3))} placeholder="123" />
           {showError && state.cardCvc.error && <span className="card__error">{state.cardCvc.error}</span>}
         </div>
         <div className="card__input card__input--half"></div>
