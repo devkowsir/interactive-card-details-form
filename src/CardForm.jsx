@@ -34,7 +34,7 @@ function CardForm({ isSubmitted, setIsSubmitted, state, dispatch }) {
           {showError && state.cardNumber.error && <span className="card__error">{state.cardNumber.error}</span>}
         </div>
         <div className="card__input card__input--half">
-          exp. date(<label htmlFor="month">mm</label>/<label htmlFor="year">yy</label>)
+          EXP. DATE(<label htmlFor="month">mm</label>/<label htmlFor="year">yy</label>)
           <div className="card__input--flex">
             <div>
               <input id="month" type="number" name="card expiry month" min="1" max="12" placeholder="12" value={state.cardExpiryMonth.value} onChange={(event) => changeDispatcher('cardExpiryMonth', event.target.value, CardNumberValidator(event.target.value, 2))} />
