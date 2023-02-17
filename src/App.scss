@@ -7,7 +7,6 @@
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 0.5rem;
-    margin-top: 0.5rem;
 
     background-color: var(--very-dark-violet);
     font-size: 20px;
@@ -119,7 +118,11 @@
     }
   }
 
-  .card__form-grid {
+  .card__nodisplay {
+    display: none;
+  }
+
+  .card__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: min(5vw, 2rem);
@@ -147,19 +150,22 @@
     }
 
     label {
-      display: block;
-      margin-bottom: 1.5rem;
+      display: inline-block;
 
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    .card__grid--2 {
+    .card__input {
+      margin-bottom: 1.5rem;
+    }
+
+    .card__input--full {
       grid-column: span 2;
     }
 
-    .card__grid--quarter {
+    .card__input--flex {
       display: flex;
 
       div {
